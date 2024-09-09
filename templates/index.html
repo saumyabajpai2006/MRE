@@ -1,257 +1,176 @@
-{% block content %}
-<!-- ========== HEADER ========== -->
-<header
-    class="sticky top-4 inset-x-0 flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full before:absolute before:inset-0 before:max-w-[66rem] before:mx-2 before:lg:mx-auto before:rounded-[26px] before:bg-neutral-800/30 before:backdrop-blur-md">
-    <nav
-        class="relative max-w-[66rem] w-full py-2.5 ps-5 pe-2 md:flex md:items-center md:justify-between md:py-0 mx-2 lg:mx-auto">
-        <div class="flex items-center justify-between">
-            <!-- Logo -->
-            <a class="flex-none rounded-md text-xl inline-block font-semibold focus:outline-none focus:opacity-80"
-                href="../templates/agency/index.html" aria-label="Preline">
-            </a>
-            <!-- End Logo -->
-
-            <div class="md:hidden">
-                <button type="button"
-                    class="hs-collapse-toggle size-8 flex justify-center items-center text-sm font-semibold rounded-full bg-neutral-800 text-white disabled:opacity-50 disabled:pointer-events-none"
-                    id="hs-navbar-floating-dark-collapse" aria-expanded="false" aria-controls="hs-navbar-floating-dark"
-                    aria-label="Toggle navigation" data-hs-collapse="#hs-navbar-floating-dark">
-                    <svg class="hs-collapse-open:hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24"
-                        height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <line x1="3" x2="21" y1="6" y2="6" />
-                        <line x1="3" x2="21" y1="12" y2="12" />
-                        <line x1="3" x2="21" y1="18" y2="18" />
-                    </svg>
-                    <svg class="hs-collapse-open:block hidden shrink-0 size-4" xmlns="http://www.w3.org/2000/svg"
-                        width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                        stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M18 6 6 18" />
-                        <path d="m6 6 12 12" />
-                    </svg>
-                </button>
-            </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation Engine - Your Personal Movie Recommendation Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="bg-gradient-to-r from-purple-800 to-blue-800 py-6">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-4xl font-bold">Movie Recommendation Engine</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#how-it-works" class="hover:text-yellow-300 transition">How It Works</a></li>
+                    <li><a href="#features" class="hover:text-yellow-300 transition">Features</a></li>
+                    <li><a href="#testimonials" class="hover:text-yellow-300 transition">Testimonials</a></li>
+                </ul>
+            </nav>
         </div>
+    </header>
 
-        <!-- Collapse -->
-        <div id="hs-navbar-floating-dark"
-            class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block"
-            aria-labelledby="hs-navbar-floating-dark-collapse">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-end py-2 md:py-0 md:ps-7">
-                <a class="p-3 ps-px sm:px-3 md:py-4 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300"
-                    href="../templates/agency/index.html" aria-current="page">Home</a>
-
-                <div
-                    class="hs-dropdown [--strategy:static] md:[--strategy:fixed] [--adaptive:none] [--is-collapse:true] md:[--is-collapse:false] p-3 ps-px sm:px-3 md:py-4">
-                    <button id="hs-dropdown-floating-dark" type="button"
-                        class="hs-dropdown-toggle flex items-center w-full text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300"
-                        aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                        About
-                        <svg class="hs-dropdown-open:-rotate-180 md:hs-dropdown-open:rotate-0 duration-300 shrink-0 ms-auto md:ms-1 size-4"
-                            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="m6 9 6 6 6-6" />
-                        </svg>
-                    </button>
-
-                    <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-neutral-800 md:shadow-md rounded-lg before:absolute top-full before:-top-5 before:start-0 before:w-full before:h-5"
-                        role="menu" aria-orientation="vertical" aria-labelledby="hs-dropdown-floating-dark">
-                        <div class="py-1 md:px-1 space-y-1">
-                            <a class="flex items-center gap-x-3.5 py-2 md:px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300"
-                                href="#">
-                                About
-                            </a>
-                            <div
-                                class="hs-dropdown [--strategy:static] md:[--strategy:absolute] [--adaptive:none] md:[--trigger:hover] [--is-collapse:true] md:[--is-collapse:false] relative">
-                                <button id="hs-dropdown-floating-dark-sub" type="button"
-                                    class="hs-dropdown-toggle w-full flex justify-between items-center py-2 md:px-3 text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300"
-                                    aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
-                                    Sub Menu
-                                    <svg class="hs-dropdown-open:-rotate-180 md:hs-dropdown-open:-rotate-90 md:-rotate-90 duration-300 shrink-0 ms-2 size-4"
-                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                        stroke-linejoin="round">
-                                        <path d="m6 9 6 6 6-6" />
-                                    </svg>
-                                </button>
-
-                                <div class="hs-dropdown-menu transition-[opacity,margin] duration-[0.1ms] md:duration-[150ms] hs-dropdown-open:opacity-100 opacity-0 md:w-48 hidden z-10 bg-neutral-800 md:shadow-md rounded-lg before:absolute before:-end-5 before:top-0 before:h-full before:w-5 !mx-[10px] top-0 end-full"
-                                    role="menu" aria-orientation="vertical"
-                                    aria-labelledby="hs-dropdown-floating-dark-sub">
-                                    <div class="py-1 md:px-1 space-y-1">
-                                        <a class="flex items-center gap-x-3.5 py-2 md:px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300"
-                                            href="#">
-                                            About
-                                        </a>
-                                        <a class="flex items-center gap-x-3.5 py-2 md:px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300"
-                                            href="#">
-                                            Downloads
-                                        </a>
-                                        <a class="flex items-center gap-x-3.5 py-2 md:px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300"
-                                            href="#">
-                                            Team Account
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300"
-                                href="#">
-                                Downloads
-                            </a>
-                            <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm text-white hover:text-neutral-300 focus:outline-none focus:text-neutral-300"
-                                href="#">
-                                Team Account
-                            </a>
-                        </div>
-                    </div>
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0">
+                    <h2 class="text-5xl font-bold mb-6">Discover Your Next Favorite Movie</h2>
+                    <p class="text-xl mb-8">Movie Recommendation Engine uses ML algorithm to analyze your tastes and suggest films you'll love.</p>
+                    <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Get Personalized Recommendations</a>
                 </div>
-
-                <div>
-                    <a class="group inline-flex items-center gap-x-2 py-2 px-3 bg-[#ff0] font-medium text-sm text-neutral-800 rounded-full focus:outline-none"
-                        href="../templates/agency/index.html#contact">
-                        Get recommendations
-                    </a>
+                <div class="md:w-1/2 md:pl-8">
+                    <img src="https://editor.analyticsvidhya.com/uploads/76889recommender-system-for-movie-recommendation.jpg" alt="AI movie recommendation concept" class="rounded-lg shadow-2xl float-animation">
                 </div>
             </div>
-        </div>
-        <!-- End Collapse -->
-    </nav>
-</header>
-<!-- ========== END HEADER ========== -->
-<div class="bg-black">
-    <!-- Hero -->
-    <div class="relative overflow-hidden">
-        <!-- Gradients -->
-        <div aria-hidden="true" class="flex absolute -top-96 start-1/2 transform -translate-x-1/2">
-            <div
-                class="bg-gradient-to-r from-violet-300/50 to-purple-100 blur-3xl w-[25rem] h-[44rem] rotate-[-60deg] transform -translate-x-[10rem] dark:from-violet-900/50 dark:to-purple-900">
-            </div>
-            <div
-                class="bg-gradient-to-tl from-blue-50 via-blue-100 to-blue-50 blur-3xl w-[90rem] h-[50rem] rounded-fulls origin-top-left -rotate-12 -translate-x-[15rem] dark:from-indigo-900/70 dark:via-indigo-900/70 dark:to-blue-900/70">
-            </div>
-        </div>
-        <!-- End Gradients -->
+        </section>
 
-        <div class="relative z-10">
-            <div class="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-16">
-                <div class="max-w-2xl text-center mx-auto">
-                    <p
-                        class="inline-block text-sm font-medium bg-clip-text bg-gradient-to-l from-blue-600 to-violet-500 text-transparent dark:from-blue-400 dark:to-violet-400">
-                        
-                    </p>
-
-                    <!-- Title -->
-                    <div class="mt-5 max-w-2xl">
-                        <h1
-                            class="block font-semibold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
-                            Movie Recommendation Engine
-                        </h1>
-                    </div>
-                    <!-- End Title -->
-
-                    <div class="mt-5 max-w-3xl">
-                        <p class="text-lg text-gray-600 dark:text-neutral-400">The “MOVIE RECOMMENDATION ENGINE” is a sophisticated system designed to deliver highly personalized suggestions based on user preferences and behaviours. Our service is designed to provide you with tailored suggestions that align perfectly with your unique preferences and interests. 
-
-                        </p>
-                    </div>
-
-                    <!-- Buttons -->
-                    <div class="mt-8 gap-3 flex justify-center">
-                        <a class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none"
-                            href="#">
-                            Get started
-                            <svg class="shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m9 18 6-6-6-6" />
-                            </svg>
-                        </a>
-                        <a class="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent text-gray-800 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none dark:text-white dark:hover:bg-neutral-800 dark:focus:bg-neutral-800"
-                            href="#">
-                            <svg class="shrink-0 size-4" width="19" height="18" viewBox="0 0 19 18" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M6.875 18C8.531 18 9.875 16.656 9.875 15V12H6.875C5.219 12 3.875 13.344 3.875 15C3.875 16.656 5.219 18 6.875 18Z"
-                                    fill="#0ACF83"></path>
-                                <path
-                                    d="M3.875 9C3.875 7.344 5.219 6 6.875 6H9.875V12H6.875C5.219 12 3.875 10.656 3.875 9Z"
-                                    fill="#A259FF"></path>
-                                <path
-                                    d="M3.875 3C3.875 1.344 5.219 0 6.875 0H9.875V6H6.875C5.219 6 3.875 4.656 3.875 3Z"
-                                    fill="#F24E1E"></path>
-                                <path
-                                    d="M9.87501 0H12.875C14.531 0 15.875 1.344 15.875 3C15.875 4.656 14.531 6 12.875 6H9.87501V0Z"
-                                    fill="#FF7262"></path>
-                                <path
-                                    d="M15.875 9C15.875 10.656 14.531 12 12.875 12C11.219 12 9.87501 10.656 9.87501 9C9.87501 7.344 11.219 6 12.875 6C14.531 6 15.875 7.344 15.875 9Z"
-                                    fill="#1ABCFE"></path>
-                            </svg>
-                            Preline Figma
-                        </a>
-                    </div>
-                    <!-- End Buttons -->
+        <section id="how-it-works" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-10 text-center">How Movie Recommendation Engine Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <img src="https://res.cloudinary.com/hilnmyskv/image/upload/q_70,f_auto/v1724027671/Algolia_com_Blog_assets/Featured_images/ai/what-role-does-ai-play-in-recommendation-systems-and-engines/lcthdczuzp1dit2rnmch.jpg" alt="AI analysis icon" class="w-24 h-24 mx-auto mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-center">AI Analysis</h3>
+                    <p class="text-center">Our advanced algorithms analyze your preferences and viewing history.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMRPhtepE10k40knivuUG0S6TdZTMbzLX9GA&s" alt="Recommendation icon" class="w-24 h-24 mx-auto mb-6">
+                    <h3 class="text-2xl font-semibold mb-4 text-center">Get Recommendations</h3>
+                    <p class="text-center">Receive personalized movie suggestions tailored just for you.</p>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- End Hero -->
+        </section>
 
-    <!-- Contact -->
-    <div class="bg-neutral-900">
-        <div class="max-w-5xl px-4 xl:px-0 py-10 lg:py-20 mx-auto">
-            <!-- Title -->
-            <div class="max-w-3xl mb-10 lg:mb-14">
-                <h2 class="text-white font-semibold text-2xl md:text-4xl md:leading-tight">Contact us</h2>
-                <p class="mt-1 text-neutral-400">Whatever your goal - we will get you there.</p>
-            </div>
-            <!-- End Title -->
-
-            <!-- Grid -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-10 lg:gap-x-16">
-                <div class="md:order-2 border-b border-neutral-800 pb-10 mb-10 md:border-b-0 md:pb-0 md:mb-0">
-                    <form>
-                        <div class="space-y-4">
-
-                        </div>
-                        <!-- End Col -->
-
-                        <div class="space-y-14">
-
-                            <!-- Item -->
-                            <div class="flex gap-x-5">
-                                <svg class="shrink-0 size-6 text-neutral-500" xmlns="http://www.w3.org/2000/svg"
-                                    width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                                    <path
-                                        d="M21.2 8.4c.5.38.8.97.8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0l8 6Z" />
-                                    <path d="m22 10-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 10" />
-                                </svg>
-                                <div class="grow">
-                                    <h4 class="text-white font-semibold">Email us:</h4>
-
-                                    <a class="mt-1 text-neutral-400 text-sm hover:text-neutral-200 focus:outline-none focus:text-neutral-200"
-                                        href="#mailto:example@site.co" target="_blank">
-                                        saumyabajpai1001@gmail.com
-                                    </a>
-                                </div>
-                            </div>
-                            <!-- End Item -->
-
-
-                        </div>
-                        <!-- End Col -->
+        <section id="features" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-10 text-center">Powerful Features</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div class="flex items-start">
+                    <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230808130011/Machine-Learning-Algorithms1-(1).webp" alt="AI icon" class="w-16 h-16 mr-6">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2">Advanced ML Algorithm</h3>
+                        <p>Our state-of-the-art machine learning models ensure highly accurate recommendations.</p>
+                    </div>
                 </div>
-                <!-- End Grid -->
+                <div class="flex items-start">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqJUFPgKsabkHiIjXkuPwolIfTvJL3CnyKpw&s" alt="Personalization icon" class="w-16 h-16 mr-6">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2">Deep Personalization</h3>
+                        <p>Get recommendations based on your unique taste profile and viewing history.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs5GZPEmRF4cf8Veh4XzcKtGPGN79-PP9hDw&s" alt="Discovery icon" class="w-16 h-16 mr-6">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2">Discover Hidden Gems</h3>
+                        <p>Uncover amazing movies you might have missed, tailored to your preferences.</p>
+                    </div>
+                </div>
+                <div class="flex items-start">
+                    <img src="https://media.istockphoto.com/id/1146311321/photo/continuous-learning-button-on-computer-keyboard.jpg?s=612x612&w=0&k=20&c=ENsLy7J5bZ1DOyKALk0kf2VxLVf7TUE0qdgucFJ775I=" alt="Update icon" class="w-16 h-16 mr-6">
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-2">Always Learning</h3>
+                        <p>Our system continuously adapts to your evolving tastes and new releases.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-20">
+            <h2 class="text-4xl font-semibold mb-10 text-center">Powered by Data Science</h2>
+            <div class="flex flex-col md:flex-row items-center bg-gray-800 rounded-xl overflow-hidden">
+                <div class="md:w-1/2">
+                    <img src="https://www.naukri.com/campus/career-guidance/wp-content/uploads/2023/11/what-is-data-science.jpg" alt="Data science visualization" class="w-full h-full object-cover">
+                </div>
+                <div class="md:w-1/2 p-12">
+                    <h3 class="text-3xl font-semibold mb-4">Cutting-Edge Technology</h3>
+                    <p class="text-lg mb-6">MovieMind leverages advanced machine learning techniques, including collaborative filtering and content-based recommendation systems, to provide you with the most accurate and relevant movie suggestions.</p>
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Explore Our Tech</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-10 text-center">What Our Users Say</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <img src="https://cdn.prod.website-files.com/6365d860c7b7a7191055eb8a/65a751b08f28b9c8b81153c3_Lori%20Bryson.jpg" alt="User avatar" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="italic mb-4">"Movie Recommendation Engine has completely transformed my movie nights. It's like having a personal film critic who knows my taste perfectly!"</p>
+                    <p class="font-semibold">- Smrati</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <img src="https://plus.unsplash.com/premium_photo-1689708721750-8a0e6dc14cee?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwYXZhdGFyfGVufDB8fDB8fHww" alt="User avatar" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="italic mb-4">"I've discovered so many amazing films I would have never found on my own. Movie Recommendation Engine is a game-changer!"</p>
+                    <p class="font-semibold">- Mike T.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
+                    <img src="https://media.istockphoto.com/id/1171169127/photo/headshot-of-cheerful-handsome-man-with-trendy-haircut-and-eyeglasses-isolated-on-gray.jpg?s=612x612&w=0&k=20&c=yqAKmCqnpP_T8M8I5VTKxecri1xutkXH7zfybnwVWPQ=" alt="User avatar" class="w-20 h-20 rounded-full mx-auto mb-4">
+                    <p class="italic mb-4">"As a film buff, I was skeptical, but Movie recommendations are spot-on. It even suggests obscure classics!"</p>
+                    <p class="font-semibold">- Emma L.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <h2 class="text-4xl font-semibold mb-6">Ready to Discover Your Next Favorite Movie?</h2>
+            <p class="text-xl mb-8">Join Movie Recommendation Engine today and experience the future of movie recommendations!</p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-4">Movie Recommendation Engine</h3>
+                    <p>Your personal ML-powered movie recommendation engine.</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
+                    <ul>
+                        <li><a href="#" class="hover:text-yellow-300">About Us</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">How It Works</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-yellow-300">Terms of Service</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h4 class="text-xl font-semibold mb-4">Contact</h4>
+                    <p>Email: saumyabajpai1001@gmail.com</p>
+                    <p>Phone: (555) 123-4567</p>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-2xl">📘</a>
+                        <a href="#" class="text-2xl">🐦</a>
+                        <a href="#" class="text-2xl">📸</a>
+                        <a href="#" class="text-2xl">🎥</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
+                <p>&copy; 2024 Movie Recommendation Engine. All rights reserved.</p>
             </div>
         </div>
-    </div>
-    <!-- End Contact -->
-
-</div>
-{% endblock %}
-{% block js %}
-<script src="https://cdn.tailwindcss.com"></script>
-{% endblock %}
-
-{% block head %}{% endblock %}
+    </footer>
+</body>
+</html>
