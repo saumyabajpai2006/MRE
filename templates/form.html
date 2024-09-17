@@ -1,75 +1,109 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="container-fluid px-0">
-
-</div>
-<div class="container py-5">
-    <div class="row">
-        <div class="col-md-6">
-            <form action="/results" class="card" method="post">
-                <div class="card-header">
-                    <h5 class="card-title">Get Recommendation</h5>
-                </div>
-                <div class="card-body">
-                    <input type="hidden" name="by" value="name">
-                    <div class="d-flex">
-
-                        <div class="mb-3 flex-grow-1 me-2">
-                            <label for="name" class="form-label">Movie</label>
-                            <input type="text" class="form-control form-control-lg" name="name" id="name"
-                                aria-describedby="helpId" placeholder="Raja Hindustani..." />
-                            <small id="helpId" class="form-text text-muted"></small>
+<div class=" text-light min-vh-100 d-flex align-items-center justify-content-center" style="background-image: ;">
+    <div class="container py-5">
+        <h2 class="text-center text-uppercase text-white mb-4">Movie Recommendation Engine</h2>
+        <div class="row justify-content-center">
+            <!-- Movie Recommendation Form -->
+            <div class="col-md-6 mb-4">
+                <form action="/results" class="card bg-dark border-secondary text-light shadow-lg" method="post">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="card-title mb-0">Get Movie Recommendations</h5>
+                    </div>
+                    <div class="card-body">
+                        <input type="hidden" name="by" value="name">
+                        <div class="d-flex">
+                            <div class="mb-3 flex-grow-1 me-2">
+                                <label for="name" class="form-label text-light">Movie</label>
+                                <input type="text" class="form-control form-control-lg bg-dark text-light border-secondary" 
+                                       name="name" id="name" placeholder="Raja Hindustani..." />
+                            </div>
+                            <div class="mb-3">
+                                <label for="count" class="form-label text-light"># of Results</label>
+                                <input type="number" class="form-control form-control-lg bg-dark text-light border-secondary" 
+                                       name="count" id="count" min="5" max="25" placeholder="5" value="5" />
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="count" class="form-label"># of results</label>
-                            <input type="number" class="form-control form-control-lg" name="count" id="count" min="5"
-                                max="25" size="2" maxlength="2" placeholder="5" value="5" />
+                        <div class="mb-3 text-center">
+                            <button class="btn btn-lg btn-outline-primary w-100">Find Similar Movies</button>
                         </div>
                     </div>
-                    <div class="mb-3">
-                        <button class="btn btn-lg btn-outline-primary">Find Similar Movie</button>
+                </form>
+            </div>
+            <!-- Keyword Search Form -->
+            <div class="col-md-6 mb-4">
+                <form action="/results" class="card bg-dark border-secondary text-light shadow-lg" method="post">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="card-title mb-0">Search by Keyword</h5>
                     </div>
-                </div>
-            </form>
+                    <div class="card-body">
+                        <input type="hidden" name="by" value="word">
+                        <div class="d-flex">
+                            <div class="mb-3 flex-grow-1 me-2">
+                                <label for="keyword" class="form-label text-light">Keyword</label>
+                                <input type="text" class="form-control form-control-lg bg-dark text-light border-secondary" 
+                                       name="name" id="keyword" placeholder="Kung Fu" />
+                            </div>
+                            <div class="mb-3">
+                                <label for="count" class="form-label text-light"># of Results</label>
+                                <input type="number" class="form-control form-control-lg bg-dark text-light border-secondary" 
+                                       name="count" id="count" min="5" max="25" placeholder="5" value="5" />
+                            </div>
+                        </div>
+                        <div class="mb-3 text-center">
+                            <button class="btn btn-lg btn-outline-success w-100">Find with Keywords</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="col-md-6">
-            <form action="/results" class="card" method="post">
-                <div class="card-header">
-                    <h5 class="card-title">Search any keyword</h5>
-                </div>
-                <div class="card-body">
-                    <input type="hidden" name="by" value="word">
-                    <div class="d-flex">
-                        <div class="mb-3 flex-grow-1 me-2">
-                            <label for="name" class="form-label">Keyword</label>
-                            <input type="text" class="form-control form-control-lg" name="name" id="name"
-                                aria-describedby="helpId" placeholder="Kung Fu" />
-                            <small id="helpId" class="form-text text-muted"></small>
-                        </div>
-                        <div class="mb-3">
-                            <label for="count" class="form-label"># of results</label>
-                            <input type="number" class="form-control form-control-lg" name="count" id="count" min="5"
-                                max="25" size="2" maxlength="2" placeholder="5" value="5" />
-                        </div>
-                    </div>
-                    <div class="mb-3">
-                        <button class="btn btn-lg btn-outline-primary">Find with Keywords</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-
     </div>
 </div>
 {% endblock %}
-{% block js %}
-<script>
 
-</script>
-{% endblock %}
 {% block css %}
 <style>
-
+    body {
+        background-color: #000;
+    }
+    .form-label {
+        font-weight: bold;
+    }
+    .btn {
+        font-size: 1.1rem;
+        transition: background-color 0.3s, color 0.3s;
+    }
+    .btn-outline-primary:hover {
+        background-color: #007bff;
+        color: #fff;
+    }
+    .btn-outline-success:hover {
+        background-color: #28a745;
+        color: #fff;
+    }
+    .card {
+        border-radius: 0.5rem;
+    }
+    .card-header {
+        padding: 0.75rem 1.25rem;
+    }
+    .card-body {
+        padding: 2rem 1.5rem;
+    }
+    .form-control {
+        background-color: #212529;
+        color: #fff;
+        border-radius: 0.25rem;
+    }
+    .form-control:focus {
+        border-color: #495057;
+        box-shadow: none;
+    }
+    .container-fluid {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 </style>
 {% endblock %}
-{% block head %}{% endblock %}
