@@ -8,24 +8,24 @@
     <style>
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
+            50% { transform: translateY(-10px); }
             100% { transform: translateY(0px); }
         }
         .float-animation {
-            animation: float 6s ease-in-out infinite;
+            animation: float 5s ease-in-out infinite;
         }
     </style>
 </head>
 <body class="bg-gray-900 text-white">
-    <header class="bg-gradient-to-r from-purple-800 to-blue-800 py-6">
+    <header class="bg-gray-800 py-6">
         <div class="container mx-auto px-4 flex justify-between items-center">
-            <h1 class="text-4xl font-bold">Movie Recommendation Engine</h1>
+            <h1 class="text-4xl font-bold text-yellow-500">Movie Recommendation Engine</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="http://127.0.0.1:5000/about" class="hover:text-yellow-300 transition">About</a></li>
-                    <li><a href="#how-it-works" class="hover:text-yellow-300 transition">How It Works</a></li>
-                    <li><a href="#features" class="hover:text-yellow-300 transition">Features</a></li>
-                    <li><a href="#testimonials" class="hover:text-yellow-300 transition">Testimonials</a></li>
+                    <li><a href="http://127.0.0.1:5000/about" class="hover:text-yellow-400 transition">About</a></li>
+                    <li><a href="#how-it-works" class="hover:text-yellow-400 transition">How It Works</a></li>
+                    <li><a href="#features" class="hover:text-yellow-400 transition">Features</a></li>
+                    <li><a href="#testimonials" class="hover:text-yellow-400 transition">Testimonials</a></li>
                 </ul>
             </nav>
         </div>
@@ -35,9 +35,9 @@
         <section class="mb-20">
             <div class="flex flex-col md:flex-row items-center">
                 <div class="md:w-1/2 mb-6 md:mb-0">
-                    <h2 class="text-5xl font-bold mb-6">Discover Your Next Favorite Movie</h2>
-                    <p class="text-xl mb-8">Movie Recommendation Engine uses ML algorithm to analyze your tastes and suggest films you'll love.</p>
-                    <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Get Personalized Recommendations</a>
+                    <h2 class="text-5xl font-bold mb-6 text-yellow-500">Discover Your Next Favorite Movie</h2>
+                    <p class="text-xl mb-8">Movie Recommendation Engine uses ML algorithms to analyze your tastes and suggest films you'll love.</p>
+                    <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out">Get Personalized Recommendations</a>
                 </div>
                 <div class="md:w-1/2 md:pl-8">
                     <img src="https://editor.analyticsvidhya.com/uploads/76889recommender-system-for-movie-recommendation.jpg" alt="AI movie recommendation concept" class="rounded-lg shadow-2xl float-animation">
@@ -46,56 +46,54 @@
         </section>
 
         <section id="how-it-works" class="mb-20">
-            <h2 class="text-4xl font-semibold mb-10 text-center">How Movie Recommendation Engine Works</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                
+            <h2 class="text-4xl font-semibold mb-10 text-center text-yellow-500">How Movie Recommendation Engine Works</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
                     <img src="https://res.cloudinary.com/hilnmyskv/image/upload/q_70,f_auto/v1724027671/Algolia_com_Blog_assets/Featured_images/ai/what-role-does-ai-play-in-recommendation-systems-and-engines/lcthdczuzp1dit2rnmch.jpg" alt="AI analysis icon" class="w-24 h-24 mx-auto mb-6">
-                    <h3 class="text-2xl font-semibold mb-4 text-center">AI Analysis</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-yellow-500">AI Analysis</h3>
                     <p class="text-center">Our advanced algorithms analyze your preferences and viewing history.</p>
                 </div>
                 <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMRPhtepE10k40knivuUG0S6TdZTMbzLX9GA&s" alt="Recommendation icon" class="w-24 h-24 mx-auto mb-6">
-                    <h3 class="text-2xl font-semibold mb-4 text-center">Get Recommendations</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-yellow-500">Get Recommendations</h3>
                     <p class="text-center">Receive personalized movie suggestions tailored just for you.</p>
                 </div>
                 <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMRPhtepE10k40knivuUG0S6TdZTMbzLX9GA&s" alt="Recommendation icon" class="w-24 h-24 mx-auto mb-6">
-                    <h3 class="text-2xl font-semibold mb-4 text-center">Get Recommendations</h3>
+                    <h3 class="text-2xl font-semibold mb-4 text-center text-yellow-500">Get Recommendations</h3>
                     <p class="text-center">Receive personalized movie suggestions tailored just for you.</p>
                 </div>
-               
             </div>
         </section>
 
         <section id="features" class="mb-20">
-            <h2 class="text-4xl font-semibold mb-10 text-center">Powerful Features</h2>
+            <h2 class="text-4xl font-semibold mb-10 text-center text-yellow-500">Powerful Features</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div class="flex items-start">
                     <img src="https://media.geeksforgeeks.org/wp-content/uploads/20230808130011/Machine-Learning-Algorithms1-(1).webp" alt="AI icon" class="w-16 h-16 mr-6">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-2">Advanced ML Algorithm</h3>
+                        <h3 class="text-2xl font-semibold mb-2 text-yellow-500">Advanced ML Algorithm</h3>
                         <p>Our state-of-the-art machine learning models ensure highly accurate recommendations.</p>
                     </div>
                 </div>
                 <div class="flex items-start">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqJUFPgKsabkHiIjXkuPwolIfTvJL3CnyKpw&s" alt="Personalization icon" class="w-16 h-16 mr-6">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-2">Deep Personalization</h3>
+                        <h3 class="text-2xl font-semibold mb-2 text-yellow-500">Deep Personalization</h3>
                         <p>Get recommendations based on your unique taste profile and viewing history.</p>
                     </div>
                 </div>
                 <div class="flex items-start">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTs5GZPEmRF4cf8Veh4XzcKtGPGN79-PP9hDw&s" alt="Discovery icon" class="w-16 h-16 mr-6">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-2">Discover Hidden Gems</h3>
+                        <h3 class="text-2xl font-semibold mb-2 text-yellow-500">Discover Hidden Gems</h3>
                         <p>Uncover amazing movies you might have missed, tailored to your preferences.</p>
                     </div>
                 </div>
                 <div class="flex items-start">
                     <img src="https://media.istockphoto.com/id/1146311321/photo/continuous-learning-button-on-computer-keyboard.jpg?s=612x612&w=0&k=20&c=ENsLy7J5bZ1DOyKALk0kf2VxLVf7TUE0qdgucFJ775I=" alt="Update icon" class="w-16 h-16 mr-6">
                     <div>
-                        <h3 class="text-2xl font-semibold mb-2">Always Learning</h3>
+                        <h3 class="text-2xl font-semibold mb-2 text-yellow-500">Always Learning</h3>
                         <p>Our system continuously adapts to your evolving tastes and new releases.</p>
                     </div>
                 </div>
@@ -103,80 +101,51 @@
         </section>
 
         <section class="mb-20">
-            <h2 class="text-4xl font-semibold mb-10 text-center">Powered by Data Science</h2>
+            <h2 class="text-4xl font-semibold mb-10 text-center text-yellow-500">Powered by Data Science</h2>
             <div class="flex flex-col md:flex-row items-center bg-gray-800 rounded-xl overflow-hidden">
                 <div class="md:w-1/2">
                     <img src="https://www.naukri.com/campus/career-guidance/wp-content/uploads/2023/11/what-is-data-science.jpg" alt="Data science visualization" class="w-full h-full object-cover">
                 </div>
                 <div class="md:w-1/2 p-12">
-                    <h3 class="text-3xl font-semibold mb-4">Cutting-Edge Technology</h3>
+                    <h3 class="text-3xl font-semibold mb-4 text-yellow-500">Cutting-Edge Technology</h3>
                     <p class="text-lg mb-6">MovieMind leverages advanced machine learning techniques, including collaborative filtering and content-based recommendation systems, to provide you with the most accurate and relevant movie suggestions.</p>
-                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">Explore Our Tech</a>
+                    <a href="#" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out">Learn More</a>
                 </div>
             </div>
         </section>
 
         <section id="testimonials" class="mb-20">
-            <h2 class="text-4xl font-semibold mb-10 text-center">What Our Users Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
-                    <img src="https://cdn.prod.website-files.com/6365d860c7b7a7191055eb8a/65a751b08f28b9c8b81153c3_Lori%20Bryson.jpg" alt="User avatar" class="w-20 h-20 rounded-full mx-auto mb-4">
-                    <p class="italic mb-4">"Movie Recommendation Engine has completely transformed my movie nights. It's like having a personal film critic who knows my taste perfectly!"</p>
-                    <p class="font-semibold">- Smrati</p>
+            <h2 class="text-4xl font-semibold mb-10 text-center text-yellow-500">What Our Users Say</h2>
+            <div class="flex flex-wrap justify-center">
+                <div class="w-full md:w-1/3 px-4 mb-6">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg text-center">
+                        <p class="text-lg mb-4">"I discovered so many great movies that I never would have found on my own. The recommendations are spot on!"</p>
+                        <h3 class="text-xl font-semibold">Alex Johnson</h3>
+                        <p class="text-gray-400">Film Enthusiast</p>
+                    </div>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
-                    <img src="https://plus.unsplash.com/premium_photo-1689708721750-8a0e6dc14cee?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFuJTIwYXZhdGFyfGVufDB8fDB8fHww" alt="User avatar" class="w-20 h-20 rounded-full mx-auto mb-4">
-                    <p class="italic mb-4">"I've discovered so many amazing films I would have never found on my own. Movie Recommendation Engine is a game-changer!"</p>
-                    <p class="font-semibold">- Mike T.</p>
+                <div class="w-full md:w-1/3 px-4 mb-6">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg text-center">
+                        <p class="text-lg mb-4">"The personalized recommendations are amazing. I've enjoyed every movie suggested to me!"</p>
+                        <h3 class="text-xl font-semibold">Emma Smith</h3>
+                        <p class="text-gray-400">Movie Critic</p>
+                    </div>
                 </div>
-                <div class="bg-gray-800 p-8 rounded-xl shadow-lg">
-                    <img src="https://media.istockphoto.com/id/1171169127/photo/headshot-of-cheerful-handsome-man-with-trendy-haircut-and-eyeglasses-isolated-on-gray.jpg?s=612x612&w=0&k=20&c=yqAKmCqnpP_T8M8I5VTKxecri1xutkXH7zfybnwVWPQ=" alt="User avatar" class="w-20 h-20 rounded-full mx-auto mb-4">
-                    <p class="italic mb-4">"As a film buff, I was skeptical, but Movie recommendations are spot-on. It even suggests obscure classics!"</p>
-                    <p class="font-semibold">- Emma L.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="text-center">
-            <h2 class="text-4xl font-semibold mb-6">Ready to Discover Your Next Favorite Movie?</h2>
-            <p class="text-xl mb-8">Join Movie Recommendation Engine today and experience the future of movie recommendations!</p>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 py-12">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-wrap justify-between">
-                <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                    <h3 class="text-2xl font-semibold mb-4">Movie Recommendation Engine</h3>
-                    <p>Your personal ML-powered movie recommendation engine.</p>
-                </div>
-                <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                    <h4 class="text-xl font-semibold mb-4">Quick Links</h4>
-                    <ul>
-                        <li><a href="#" class="hover:text-yellow-300">About Us</a></li>
-                        <li><a href="#" class="hover:text-yellow-300">How It Works</a></li>
-                        <li><a href="#" class="hover:text-yellow-300">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-yellow-300">Terms of Service</a></li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/4 mb-8 md:mb-0">
-                    <h4 class="text-xl font-semibold mb-4">Contact</h4>
-                    <p>Email: saumyabajpai1001@gmail.com</p>
-                    <p>Phone: (555) 123-4567</p>
-                </div>
-                <div class="w-full md:w-1/4">
-                    <h4 class="text-xl font-semibold mb-4">Follow Us</h4>
-                    <div class="flex space-x-4">
-                        <a href="#" class="text-2xl">📘</a>
-                        <a href="#" class="text-2xl">🐦</a>
-                        <a href="#" class="text-2xl">📸</a>
-                        <a href="#" class="text-2xl">🎥</a>
+                <div class="w-full md:w-1/3 px-4 mb-6">
+                    <div class="bg-gray-800 p-8 rounded-xl shadow-lg text-center">
+                        <p class="text-lg mb-4">"A fantastic tool for finding movies that match my taste. Highly recommend it to any movie lover!"</p>
+                        <h3 class="text-xl font-semibold">Michael Lee</h3>
+                        <p class="text-gray-400">Cinephile</p>
                     </div>
                 </div>
             </div>
-            <div class="mt-8 pt-8 border-t border-gray-700 text-center">
-                <p>&copy; 2024 Movie Recommendation Engine. All rights reserved.</p>
-            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-lg">&copy; 2024 Movie Recommendation Engine. All rights reserved.</p>
+            <p class="text-sm">Built with <a href="https://tailwindcss.com/" class="text-yellow-400 hover:underline">Tailwind CSS</a> and <a href="https://www.python.org/" class="text-yellow-400 hover:underline">Python</a>.</p>
         </div>
     </footer>
 </body>
