@@ -1,5 +1,59 @@
 {% extends 'base.html' %}
 {% block content %}
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+{% if messages %}
+{% for category, message in messages %}
+<div class="alert alert-{{category }} alert-dismissible fade show" role="alert">
+    {% if category == 'success' %}
+    <strong>
+        <i class="fas fa-check-circle"></i>
+    </strong>
+    {% elif category == 'danger' %}
+    <strong>
+        <i class="fas fa-exclamation-triangle"></i>
+    </strong>
+    {% endif %}
+    <strong>{{message|safe}}</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation Engine - Your Personal Movie Recommendation Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        .float-animation {
+            animation: float 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white" style="background-image: url('https://4kwallpapers.com/images/wallpapers/gradient-background-6016x3384-11027.jpg'); background-size: contain; background-repeat: no-repeat;">
+    <header class="bg-gray-800 py-6">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-4xl font-bold text-yellow-500">Movie Recommendation Engine</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="/" >Home</a></li>
+                    <li><a href="http://127.0.0.1:5000/about" >About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
 <div class=" text-light min-vh-100 d-flex align-items-center justify-content-center" style="background-image:url('https://getwallpapers.com/wallpaper/full/1/b/d/829640-gorgerous-movie-backgrounds-1920x1080-ipad-pro.jpg') ;">
     <div class="container py-5">
         <h2 class="text-center text-uppercase text-white mb-4">Movie Recommendation Engine</h2>
@@ -105,5 +159,15 @@
         align-items: center;
         justify-content: center;
     }
+    li{
+        color: white;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+    li:hover{
+        color: #fbbf24;
+    }
 </style>
 {% endblock %}
+</body>
+</html>
