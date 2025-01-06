@@ -9,7 +9,6 @@ app.secret_key = 'supersecretmre'
 
 @app.route('/')
 def index():
-    flash('Welcome to the Flask App', 'info')
     return render_template('index.html')
 
 @app.route('/about')
