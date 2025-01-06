@@ -5,7 +5,7 @@ def get_id_from_movie(movie_name, df):
     try:return df[df['names'].str.lower()==movie_name.lower()].index.tolist()[0]
     except: return -1
 
-def get_random_movie_from_keyword(keyword, df):
+def get_random_movie_from_keyword(keyword, df):    
     try: return df[df['overview'].str.lower().str.contains(keyword.lower())].sample(1).index.tolist()[0]
     except: return -1
 
