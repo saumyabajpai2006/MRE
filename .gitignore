@@ -1,3 +1,6 @@
 /__pycache__
 *.pyc
 *.joblib
+
+# Allow model files to be tracked
+!recommender/models/*.joblib
