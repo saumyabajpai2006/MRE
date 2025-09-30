@@ -40,7 +40,10 @@ def result():
             flash('Movie not found', 'danger')
             return redirect(url_for('forminput'))
         else:
-            results = [movie_data_from_tmdb(movie) for movie in movies]
+            results = movie_data_from_tmdb(name, count=count)
+            if results is None:
+                flash('Error fetching movie data', 'danger')
+                return redirect(url_for('forminput'))
             return render_template('results.html', name=name, by=by, count=count, results=results)
     return redirect(url_for('forminput'))
 
