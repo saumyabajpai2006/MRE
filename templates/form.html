@@ -46,8 +46,8 @@
             <h1 class="text-4xl font-bold text-yellow-500">Movie Recommendation Engine</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="/" >Home</a></li>
-                    <li><a href="http://127.0.0.1:5000/about" >About</a></li>
+                    <li><a href="{{ url_for('index') }}" >Home</a></li>
+                    <li><a href="{{ url_for('about') }}" >About</a></li>
                 </ul>
             </nav>
         </div>

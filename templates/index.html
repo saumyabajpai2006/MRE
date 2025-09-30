@@ -22,7 +22,7 @@
             <h1 class="text-4xl font-bold text-yellow-500">Movie Recommendation Engine</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="http://127.0.0.1:5000/about" class="hover:text-yellow-400 transition">About</a></li>
+                    <li><a href="{{ url_for('about') }}" class="hover:text-yellow-400 transition">About</a></li>
                     <li><a href="#how-it-works" class="hover:text-yellow-400 transition">How It Works</a></li>
                     <li><a href="#features" class="hover:text-yellow-400 transition">Features</a></li>
                     <li><a href="#testimonials" class="hover:text-yellow-400 transition">Testimonials</a></li>
@@ -37,7 +37,7 @@
                 <div class="md:w-1/2 mb-6 md:mb-0">
                     <h2 class="text-5xl font-bold mb-6 text-yellow-500">Discover Your Next Favorite Movie</h2>
                     <p class="text-xl mb-8">Movie Recommendation Engine uses ML algorithms to analyze your tastes and suggest films you'll love.</p>
-                    <a href="http://127.0.0.1:5000/recommender" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out">Get Personalized Recommendations</a>
+                    <a href="{{ url_for('forminput') }}" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full text-lg transition duration-300 ease-in-out">Get Personalized Recommendations</a>
                 </div>
                 <div class="md:w-1/2 md:pl-8">
                     <img src="https://cdn2.iconfinder.com/data/icons/3d-cinema-movie-illustration/512/M_23.png" alt="AI movie recommendation concept" class="rounded-lg shadow-2xl float-animation">
