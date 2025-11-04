@@ -1,6 +1,9 @@
 /__pycache__
 *.pyc
-*.joblib
 
-# Allow model files to be tracked
+# Exclude joblib files except in models directory
+*.joblib
 !recommender/models/*.joblib
+
+# Allow data files
+!recommender/models/*.parquet

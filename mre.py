@@ -1,5 +1,10 @@
 import pandas as pd
 from joblib import load
+import os
+
+# Get the absolute path to the models directory
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+MODELS_DIR = os.path.join(BASE_DIR, 'recommender', 'models')
 
 def get_id_from_movie(movie_name, df):
     try:return df[df['names'].str.lower()==movie_name.lower()].index.tolist()[0]
@@ -10,8 +15,8 @@ def get_random_movie_from_keyword(keyword, df):
     except: return -1
 
 def get_recommendation(query='', by='name', count=10):
-    df = pd.read_parquet('recommender/models/clean_movies.parquet')
-    sim = load('recommender/models/similarity.joblib')
+    df = pd.read_parquet(os.path.join(MODELS_DIR, 'clean_movies.parquet'))
+    sim = load(os.path.join(MODELS_DIR, 'similarity.joblib'))
     print(f'query: {query}, by: {by}, count: {count}')
     match by:
         case 'name':
