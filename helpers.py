@@ -20,7 +20,7 @@ def movie_data_from_tmdb(movie_name, count=5):
         url = f"https://api.themoviedb.org/3/search/movie?query={movie_name}&include_adult=false&language=en-US&page=1"
         # Read TMDB Bearer token from environment for security; fall back to embedded token if missing
         bearer = os.environ.get('TMDB_BEARER',
-                             'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMjBjMGRlMTU4ZTllYmE1ZjViMDQ1YWFkMmVjYTA3NSIsIm5iZiI6MTcyNDY1Mjk1MC45MzczNDUsInN1YiI6IjVlZTlkYzNlMTY4NWRhMDAzNjI5ODc1ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VQS6z9TVtiem10Ev-1qhecdTEkl0BxpatxEBHoq7KEw')
+                                'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlMjBjMGRlMTU4ZTllYmE1ZjViMDQ1YWFkMmVjYTA3NSIsIm5iZiI6MTcyNDY1Mjk1MC45MzczNDUsInN1YiI6IjVlZTlkYzNlMTY4NWRhMDAzNjI5ODc1ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.VQS6z9TVtiem10Ev-1qhecdTEkl0BxpatxEBHoq7KEw')
         headers = {
             "accept": "application/json",
             "Authorization": f"Bearer {bearer}"

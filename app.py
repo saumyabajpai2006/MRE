@@ -1,8 +1,12 @@
 import os
+from dotenv import load_dotenv
 from flask import Flask, render_template, request, redirect, url_for, flash
 from werkzeug.utils import secure_filename
 from helpers import movie_data_from_tmdb
 from mre import *
+
+# Load environment variables from .env file (if it exists)
+load_dotenv()
 
 app = Flask(__name__)
 # Use environment variable for secret key in production

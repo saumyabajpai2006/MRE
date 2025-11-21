@@ -1,6 +1,11 @@
 /__pycache__
 *.pyc
 
+# Environment secrets (never commit .env, but .env.example is tracked)
+.env
+.env.local
+.env.*.local
+
 # Exclude large joblib files from git
 *.joblib
 !recommender/models/vectorizer.joblib
