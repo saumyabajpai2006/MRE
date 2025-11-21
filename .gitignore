@@ -1,0 +1,11 @@
+/__pycache__
+*.pyc
+
+# Exclude large joblib files from git
+*.joblib
+!recommender/models/vectorizer.joblib
+# Prevent only similarity.joblib from being committed (too large for Render)
+recommender/models/similarity.joblib
+
+# Allow parquet data files
+!recommender/models/*.parquet

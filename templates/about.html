@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Movie Recommendation Engine - Your Personal Movie Recommendation Engine</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom theme colors */
+        /* .bg-dark-gray {
+            background-color: #1a1a1a;
+        } */
+        .text-yellow-highlight {
+            color: #fbbf24;
+        }
+        .bg-yellow-highlight {
+            background-color: #fbbf24;
+        }
+        .bg-gradient-dark {
+            background: linear-gradient(to right, #2c3e50, #4b6584);
+        }
+        .hover-yellow-highlight:hover {
+            color: #fbbf24;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <header class="bg-gradient-dark py-6">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="{{ url_for('index') }}" class="text-4xl font-bold text-yellow-highlight">Movie Recommendation Engine</a>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="{{ url_for('index') }}" class="hover-yellow-highlight transition">Home</a></li>
+                    <li><a href="{{ url_for('forminput') }}" class="hover-yellow-highlight transition">Get recommendations</a></li>
+                    <li><a href="#our-mission" class="hover-yellow-highlight transition">Our Mission</a></li>
+                    <li><a href="#technology" class="hover-yellow-highlight transition">Technology</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+        <section class="mb-20">
+            <h1 class="text-5xl font-bold mb-6 text-center text-yellow-highlight">About Movie Recommendation Engine</h1>
+            <p class="text-xl text-center max-w-3xl mx-auto">Discover the story behind your personal ML-powered movie recommendation engine.</p>
+        </section>
+
+        <section id="our-story" class="mb-20">
+            <h2 class="text-4xl font-semibold mb-10 text-yellow-highlight">The Smart Way To Pick A Movie</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                    <p class="text-lg mb-4">Watching movies is fun, but figuring out what movie to watch next is a nerve-racking experience. Endlessly scrolling through Netflix, watching trailers on YouTube, looking up IMDb ratings, wasting half an hour and still cannot decide what to watch - does this seem familiar to you?</p>
+                    <p class="text-lg">Then you have landed on the right page! Movie recommendation engine is the answer to the question "What movie should I watch?"! Your film choices are about to be simplified greatly.</p>
+                </div>
+                <div class="md:w-1/2 ml-20">
+                    <img src="https://mir-s3-cdn-cf.behance.net/projects/404/da82aa113933149.6031a799ce041.png" alt="MovieMind founders" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <section id="our-mission" class="mb-20 bg-gray-800 p-12 rounded-xl">
+            <h2 class="text-4xl font-semibold mb-6 text-center text-yellow-highlight">Our Mission</h2>
+            <p class="text-xl text-center max-w-3xl mx-auto">At Movie Recommendation Engine, our mission is to enhance the movie-recommended experience by connecting viewers with films they'll love. We believe that everyone deserves to experience the magic of cinema, and we're here to make that happen, one recommendation at a time.</p>
+        </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-12 bg-gray-800 text-white">
+        <div class="container mx-auto px-6 ">
+            <h2 class="text-4xl font-bold mb-8 text-center text-yellow-highlight">Frequently Asked Questions</h2>
+            <div class="space-y-6">
+                <div class="faq-item p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold">What is a movie recommendation engine?</h3>
+                    <p class="mt-2">A movie recommendation engine is a system that suggests movies to users.</p>
+                </div>
+                <div class="faq-item p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold">How does a movie recommendation engine work?</h3>
+                    <p class="mt-2">We use machine learning algorithms to predict what movies a user is most likely want to watch.</p>
+                </div>
+                <div class="faq-item p-6 rounded-lg shadow-lg transition-transform hover:scale-105">
+                    <h3 class="text-2xl font-semibold">Why are movie recommendation engines useful?</h3>
+                    <p class="mt-2">Movie recommendation engines help users discover new films they might enjoy, saving time and enhancing their entertainment experience. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="technology" class="mb-20" margin="mt-20">
+            <h2 class="text-4xl font-semibold mb-10 text-yellow-highlight mt-20">Our Technology</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-highlight">Powered by ML</h3>
+                    <p class="text-lg mb-4">At the heart of Movie Recommendation is our proprietary ML algorithm, which combines collaborative filtering, content-based analysis, and deep learning techniques to deliver highly accurate movie recommendations.</p>
+                    <p class="text-lg mb-4">Our system analyzes thousands of data points, including:</p>
+                    <ul class="list-disc list-inside mb-4 text-yellow-highlight">
+                        <li>Movie metadata (genre, director, cast, etc.)</li>
+                    </ul>
+                    <p class="text-lg">The result is that movie recommendation engine provide personalized movie suggestions.</p>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://www.simplilearn.com/ice9/free_resources_article_thumb/Deep-Learning-vs-Machine-Learning.jpg" alt="AI technology visualization" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <h2 class="text-4xl font-semibold mb-6 text-yellow-highlight">Enjoy Your Personalized Movie Suggestions</h2>
+            <p class="text-xl mb-8">Be part of the future of movie discovery. The world is a stage, the stage is a world of entertainment.</p>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h3 class="text-2xl font-semibold mb-4 text-yellow-highlight">MovieMind</h3>
+                    <p>Your personal AI-powered movie recommendation engine.</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-8 md:mb-0">
+                    <h4 class="text-xl font-semibold mb-4 text-yellow-highlight">Contact</h4>
+                    <p>Email: saumyabajpai1001@gmail.com</p>
+                    <p>Phone: 7897238327</p>
+                </div>
+            </div>
+            <p class="text-center mt-12 text-gray-500">© 2024 MovieMind. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

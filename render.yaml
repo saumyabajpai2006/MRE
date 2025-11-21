@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: mre-flask
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && python scripts/download_models.py
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT

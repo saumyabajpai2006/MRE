@@ -1,0 +1,11 @@
+pandas
+numpy
+nltk
+scikit-learn
+matplotlib
+flask
+joblib
+requests
+fastparquet
+pyarrow
+gunicorn==21.2.0
