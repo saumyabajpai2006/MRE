@@ -96,7 +96,7 @@ Or set `Start Command` to run the downloader before starting gunicorn (not recom
 Before pushing, you can test the downloader locally (recommended):
 
 ```bash
-set MODEL_URL=https://huggingface.co/<username>/<repo>/resolve/main/similarity.joblib
+set MODEL_URL=https://huggingface.co/saumya1001/similarity/resolve/main/similarity.joblib
 python scripts/download_models.py
 ```
 
